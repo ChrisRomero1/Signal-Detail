@@ -12,7 +12,6 @@
     <meta name="theme-color" content="#0ea5e9" />
     <link rel="canonical" href="https://signaldetailing.com/" />
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Signal Detailing | Mobile Car Detailing in Signal Mountain & Chattanooga, TN" />
     <meta property="og:description" content="Premium mobile car detailing by Isaac & Charlie. Serving Signal Mountain, Chattanooga, and Hamilton County with interior detailing, exterior detailing, ceramic coating, and paint correction." />
     <meta property="og:type" content="website" />
@@ -20,7 +19,6 @@
     <meta property="og:image" content="https://signaldetailing.com/logo.png" />
     <meta property="og:site_name" content="Signal Detailing" />
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Signal Detailing | Mobile Car Detailing in Signal Mountain & Chattanooga, TN" />
     <meta name="twitter:description" content="Premium mobile car detailing in Signal Mountain and Chattanooga, TN." />
@@ -113,12 +111,10 @@
             color: inherit;
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
+        section {
+            scroll-margin-top: 100px;
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -233,7 +229,6 @@
             line-height: 1;
         }
 
-        /* Hero */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -458,11 +453,6 @@
             letter-spacing: 1px;
         }
 
-        /* Generic sections */
-        section {
-            scroll-margin-top: 100px;
-        }
-
         .section-header {
             text-align: center;
             max-width: 760px;
@@ -492,9 +482,20 @@
             line-height: 1.75;
         }
 
-        /* Services */
-        .services {
+        .services,
+        .why-us,
+        .process,
+        .team,
+        .reviews,
+        .faq,
+        .final-cta,
+        .contact {
             padding: 7rem 4%;
+        }
+
+        .services,
+        .process,
+        .faq {
             background: var(--surface);
         }
 
@@ -506,16 +507,22 @@
             margin: 0 auto;
         }
 
-        .service-card {
+        .service-card,
+        .review-card,
+        .step,
+        .faq-item {
             background: white;
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+        }
+
+        .service-card {
             padding: 2rem;
             transition: all 0.35s ease;
             position: relative;
             overflow: hidden;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
         }
 
         .service-card::before {
@@ -574,12 +581,6 @@
             border: 1px solid rgba(14, 165, 233, 0.18);
         }
 
-        /* Why us */
-        .why-us {
-            padding: 7rem 4%;
-            background: var(--primary);
-        }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -621,8 +622,7 @@
             border: 1px solid rgba(14, 165, 233, 0.2);
         }
 
-        .feature-text h3,
-        .feature-text h4 {
+        .feature-text h3 {
             font-size: 1.15rem;
             margin-bottom: 0.45rem;
             color: var(--text);
@@ -695,12 +695,6 @@
             box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
         }
 
-        /* Process */
-        .process {
-            padding: 7rem 4%;
-            background: var(--surface);
-        }
-
         .process-steps {
             display: flex;
             justify-content: center;
@@ -717,10 +711,6 @@
             text-align: center;
             padding: 2rem 1.5rem;
             position: relative;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
         }
 
         .step:not(:last-child)::after {
@@ -750,8 +740,7 @@
             box-shadow: 0 4px 15px rgba(14, 165, 233, 0.28);
         }
 
-        .step h3,
-        .step h4 {
+        .step h3 {
             font-size: 1.2rem;
             margin-bottom: 0.7rem;
             color: var(--text);
@@ -761,12 +750,6 @@
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.7;
-        }
-
-        /* Team */
-        .team {
-            padding: 7rem 4%;
-            background: var(--primary);
         }
 
         .team-grid {
@@ -793,16 +776,26 @@
             box-shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
         }
 
+        .team-photo {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px var(--accent), 0 10px 30px rgba(14, 165, 233, 0.22);
+        }
+
         .team-avatar {
-            width: 112px;
-            height: 112px;
+            width: 130px;
+            height: 130px;
             background: linear-gradient(135deg, var(--accent), var(--accent-light));
             border-radius: 50%;
-            margin: 0 auto 1.25rem;
+            margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 700;
             color: white;
             border: 4px solid white;
@@ -830,10 +823,36 @@
             font-size: 0.95rem;
         }
 
-        /* FAQ */
-        .faq {
-            padding: 7rem 4%;
-            background: var(--surface);
+        .reviews-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .review-card {
+            padding: 1.5rem;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            margin-bottom: 0.85rem;
+            letter-spacing: 2px;
+        }
+
+        .review-card p {
+            color: var(--text-muted);
+            line-height: 1.75;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-name {
+            color: var(--text);
+            font-weight: 700;
+            font-size: 0.95rem;
         }
 
         .faq-grid {
@@ -844,11 +863,7 @@
         }
 
         .faq-item {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 18px;
             padding: 1.35rem 1.4rem;
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
         }
 
         .faq-item h3 {
@@ -863,9 +878,47 @@
             font-size: 0.95rem;
         }
 
-        /* Contact */
+        .final-cta {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta .section-title,
+        .final-cta .section-subtitle {
+            color: white;
+        }
+
+        .final-cta-inner {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .final-cta .btn-primary {
+            background: white;
+            color: var(--accent-dark);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
+        }
+
+        .final-cta .btn-primary:hover,
+        .final-cta .btn-primary:focus-visible {
+            color: var(--accent-dark);
+        }
+
+        .final-cta .btn-secondary {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.35);
+            color: white;
+        }
+
+        .final-cta .btn-secondary:hover,
+        .final-cta .btn-secondary:focus-visible {
+            background: rgba(255, 255, 255, 0.18);
+            color: white;
+            border-color: white;
+        }
+
         .contact {
-            padding: 7rem 4%;
             background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
             position: relative;
             overflow: hidden;
@@ -945,8 +998,7 @@
             border: 1px solid rgba(14, 165, 233, 0.2);
         }
 
-        .contact-details h3,
-        .contact-details h4 {
+        .contact-details h3 {
             font-size: 0.82rem;
             color: var(--text-muted);
             margin-bottom: 0.25rem;
@@ -1048,7 +1100,6 @@
             box-shadow: 0 10px 30px rgba(14, 165, 233, 0.34);
         }
 
-        /* Footer */
         footer {
             background: white;
             padding: 4rem 4% 2rem;
@@ -1072,8 +1123,7 @@
             max-width: 350px;
         }
 
-        .footer-links h3,
-        .footer-links h4 {
+        .footer-links h3 {
             font-size: 1rem;
             margin-bottom: 1rem;
             color: var(--text);
@@ -1110,7 +1160,6 @@
             font-size: 0.85rem;
         }
 
-        /* Responsive */
         @media (max-width: 1100px) {
             .features-grid,
             .contact-container {
@@ -1126,7 +1175,8 @@
                 display: none;
             }
 
-            .footer-content {
+            .footer-content,
+            .reviews-grid {
                 grid-template-columns: 1fr 1fr;
             }
         }
@@ -1152,7 +1202,8 @@
                 margin-top: 2rem;
             }
 
-            .team-grid {
+            .team-grid,
+            .reviews-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1191,7 +1242,9 @@
             .why-us,
             .process,
             .team,
+            .reviews,
             .faq,
+            .final-cta,
             .contact,
             footer {
                 padding-left: 1rem;
@@ -1211,7 +1264,8 @@
 
             .contact-form,
             .team-card,
-            .service-card {
+            .service-card,
+            .review-card {
                 padding: 1.5rem;
             }
 
@@ -1233,6 +1287,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#why-us">Why Us</a></li>
             <li><a href="#process">Process</a></li>
+            <li><a href="#team">Team</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact" class="cta-nav">Get a Quote</a></li>
         </ul>
@@ -1489,7 +1544,7 @@
 
             <div class="team-grid">
                 <article class="team-card">
-                    <div class="team-avatar">I</div>
+                    <img src="isaac.jpg" alt="Isaac - Co-Founder of Signal Detailing" class="team-photo" />
                     <h3>Isaac</h3>
                     <div class="team-role">Co-Founder & Lead Detailer</div>
                     <p>
@@ -1506,6 +1561,42 @@
                         Focused on smooth scheduling, customer communication, and making sure every job
                         is organized and completed at a high level from start to finish.
                     </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="reviews" id="reviews">
+            <div class="section-header">
+                <span class="section-label">Why People Choose Us</span>
+                <h2 class="section-title">Built to Leave a Strong Impression</h2>
+                <p class="section-subtitle">
+                    Clean results, easy communication, and a service experience that feels simple from start to finish.
+                </p>
+            </div>
+
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Super easy to work with and the car looked way better than I expected. You can tell they actually care about the details.
+                    </p>
+                    <div class="review-name">Local Customer</div>
+                </article>
+
+                <article class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        The convenience is huge. They came out, handled everything professionally, and the interior looked completely refreshed.
+                    </p>
+                    <div class="review-name">Happy Client</div>
+                </article>
+
+                <article class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Great communication, on time, and the finish looked awesome. I’d definitely book again.
+                    </p>
+                    <div class="review-name">Returning Customer</div>
                 </article>
             </div>
         </section>
@@ -1551,6 +1642,23 @@
                         to request a quote and schedule service.
                     </p>
                 </article>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="final-cta-inner">
+                <div class="section-header">
+                    <span class="section-label" style="color: rgba(255,255,255,0.85);">Ready to Book?</span>
+                    <h2 class="section-title">Let’s Get Your Vehicle Looking Its Best</h2>
+                    <p class="section-subtitle">
+                        Reach out today for a custom quote. Fast replies, mobile convenience, and premium detailing service.
+                    </p>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Request a Quote</a>
+                    <a href="tel:423-633-7344" class="btn btn-secondary">Call (423) 633-7344</a>
+                </div>
             </div>
         </section>
 
@@ -1684,7 +1792,7 @@
                 <ul>
                     <li><a href="#why-us">Why Choose Us</a></li>
                     <li><a href="#process">How It Works</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#team">Our Team</a></li>
                     <li><a href="#contact">Get a Quote</a></li>
                 </ul>
             </div>
@@ -1707,17 +1815,18 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.getElementById('navbar');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
             if (window.gsap && window.ScrollTrigger) {
                 gsap.registerPlugin(ScrollTrigger);
-
-                const navbar = document.getElementById('navbar');
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
-                });
 
                 gsap.from('.hero-badge', {
                     opacity: 0,
@@ -1819,6 +1928,18 @@
                     ease: 'power2.out'
                 });
 
+                gsap.from('.review-card', {
+                    scrollTrigger: {
+                        trigger: '.reviews-grid',
+                        start: 'top 84%'
+                    },
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.6,
+                    stagger: 0.08,
+                    ease: 'power2.out'
+                });
+
                 gsap.from('.faq-item', {
                     scrollTrigger: {
                         trigger: '.faq-grid',
@@ -1870,15 +1991,6 @@
                             ease: 'power2.out'
                         });
                     });
-                });
-            } else {
-                const navbar = document.getElementById('navbar');
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        navbar.classList.add('scrolled');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                    }
                 });
             }
 
