@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Signal Detailing | Mobile Car Detailing in Signal Mountain & Chattanooga, TN</title>
-    <meta name="description" content="Signal Detailing offers premium mobile car detailing in Signal Mountain, Chattanooga, and Hamilton County, TN. Interior detailing, exterior detailing, ceramic coating, paint correction, and more." />
-    <meta name="keywords" content="Signal Detailing, mobile car detailing Chattanooga, car detailing Signal Mountain, ceramic coating Chattanooga, paint correction Chattanooga, interior detailing, exterior detailing" />
+    <meta name="description" content="Signal Detailing offers premium mobile car detailing in Signal Mountain, Chattanooga, and Hamilton County, TN. Interior detailing, exterior detailing, express washes, and full detail packages." />
+    <meta name="keywords" content="Signal Detailing, mobile car detailing Chattanooga, car detailing Signal Mountain, interior detailing, exterior detailing, express wash, full detail package" />
     <meta name="author" content="Signal Detailing" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0ea5e9" />
     <link rel="canonical" href="https://signaldetailing.com/" />
 
     <meta property="og:title" content="Signal Detailing | Mobile Car Detailing in Signal Mountain & Chattanooga, TN" />
-    <meta property="og:description" content="Premium mobile car detailing by Isaac & Charlie. Serving Signal Mountain, Chattanooga, and Hamilton County with interior detailing, exterior detailing, ceramic coating, and paint correction." />
+    <meta property="og:description" content="Premium mobile car detailing by Isaac & Charlie. Serving Signal Mountain, Chattanooga, and Hamilton County with interior detailing, exterior detailing, express washes, and full detail packages." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://signaldetailing.com/" />
     <meta property="og:image" content="https://signaldetailing.com/logo.png" />
@@ -331,22 +331,18 @@
 
         .owner-avatars {
             display: flex;
+            align-items: center;
         }
 
         .owner-avatar {
-            width: 42px;
-            height: 42px;
+            width: 52px;
+            height: 52px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: white;
-            border: 2px solid white;
-            margin-left: -10px;
-            font-size: 0.95rem;
-            box-shadow: 0 2px 8px rgba(14, 165, 233, 0.22);
+            object-fit: cover;
+            border: 3px solid white;
+            margin-left: -12px;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.20);
+            background: #dbeafe;
         }
 
         .owner-avatar:first-child {
@@ -642,57 +638,27 @@
             overflow: hidden;
             border: 1px solid var(--border);
             box-shadow: 0 10px 40px rgba(14, 165, 233, 0.1);
+            padding: 1rem;
         }
 
-        .visual-content {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            text-align: center;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.9rem;
+            height: 100%;
         }
 
-        .visual-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            opacity: 0.85;
+        .gallery-grid img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+            transition: transform 0.25s ease;
         }
 
-        .visual-text {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.6rem;
-            color: var(--text);
-        }
-
-        .visual-subtext {
-            color: var(--text-muted);
-            font-size: 1rem;
-            max-width: 320px;
-            line-height: 1.6;
-            margin-bottom: 1.4rem;
-        }
-
-        .visual-badges {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .visual-badge {
-            background: white;
-            border: 1px solid var(--border);
-            color: var(--text);
-            border-radius: 999px;
-            padding: 0.55rem 0.9rem;
-            font-size: 0.88rem;
-            font-weight: 600;
-            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+        .gallery-grid img:hover {
+            transform: scale(1.02);
         }
 
         .process-steps {
@@ -780,26 +746,12 @@
             width: 130px;
             height: 130px;
             object-fit: cover;
+            object-position: center top;
             border-radius: 50%;
             margin: 0 auto 1.5rem;
             border: 4px solid white;
             box-shadow: 0 0 0 2px var(--accent), 0 10px 30px rgba(14, 165, 233, 0.22);
-        }
-
-        .team-avatar {
-            width: 130px;
-            height: 130px;
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: 700;
-            color: white;
-            border: 4px solid white;
-            box-shadow: 0 0 0 2px var(--accent), 0 10px 30px rgba(14, 165, 233, 0.22);
+            background: #dbeafe;
         }
 
         .team-card h3 {
@@ -1167,7 +1119,7 @@
             }
 
             .features-visual {
-                min-height: 320px;
+                min-height: auto;
                 order: -1;
             }
 
@@ -1178,6 +1130,10 @@
             .footer-content,
             .reviews-grid {
                 grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid img {
+                height: 190px;
             }
         }
 
@@ -1203,7 +1159,8 @@
             }
 
             .team-grid,
-            .reviews-grid {
+            .reviews-grid,
+            .gallery-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1307,14 +1264,14 @@
 
                 <p>
                     Signal Detailing brings professional interior detailing, exterior detailing,
-                    ceramic coating, and paint correction directly to your driveway. We proudly
+                    express washes, and full detail packages directly to your driveway. We proudly
                     serve Signal Mountain, Chattanooga, and Hamilton County, Tennessee.
                 </p>
 
                 <div class="hero-owners">
                     <div class="owner-avatars" aria-hidden="true">
-                        <div class="owner-avatar">I</div>
-                        <div class="owner-avatar">C</div>
+                        <img src="isaac.jpg" alt="Isaac" class="owner-avatar" />
+                        <img src="charlie.jpg" alt="Charlie" class="owner-avatar" />
                     </div>
                     <span>Owned by Isaac & Charlie</span>
                 </div>
@@ -1352,7 +1309,7 @@
                 <span class="section-label">Our Services</span>
                 <h2 class="section-title">Mobile Detailing Services Built Around Your Car</h2>
                 <p class="section-subtitle">
-                    From quick maintenance cleans to premium correction work, we offer
+                    From quick maintenance cleans to full resets, we offer
                     high-quality car detailing services in Signal Mountain and Chattanooga.
                     Every vehicle is different, so we provide custom quotes based on your car
                     and what it needs.
@@ -1382,16 +1339,6 @@
                 </article>
 
                 <article class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h3>Ceramic Coating</h3>
-                    <p>
-                        Long-lasting paint protection with hydrophobic performance that helps
-                        your car stay cleaner longer and makes maintenance easier.
-                    </p>
-                    <span class="service-quote">Custom Quote</span>
-                </article>
-
-                <article class="service-card">
                     <div class="service-icon">🚗</div>
                     <h3>Full Detail Package</h3>
                     <p>
@@ -1407,16 +1354,6 @@
                     <p>
                         A lighter maintenance option for customers who want a cleaner vehicle
                         without committing to a full detail every time.
-                    </p>
-                    <span class="service-quote">Custom Quote</span>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>Paint Correction</h3>
-                    <p>
-                        Machine polishing designed to reduce swirls, oxidation, and light
-                        imperfections while bringing back clarity, depth, and shine.
                     </p>
                     <span class="service-quote">Custom Quote</span>
                 </article>
@@ -1481,17 +1418,13 @@
                 </div>
 
                 <div class="features-visual">
-                    <div class="visual-content">
-                        <div class="visual-icon">🏔️</div>
-                        <div class="visual-text">Signal Mountain Based</div>
-                        <div class="visual-subtext">
-                            Premium mobile detailing for Signal Mountain, Chattanooga, and surrounding Hamilton County areas.
-                        </div>
-                        <div class="visual-badges">
-                            <div class="visual-badge">Interior + Exterior</div>
-                            <div class="visual-badge">Ceramic Coatings</div>
-                            <div class="visual-badge">Paint Correction</div>
-                        </div>
+                    <div class="gallery-grid">
+                        <img src="detail1.jpg" alt="Detailed truck exterior" />
+                        <img src="detail2.jpg" alt="Clean interior floor" />
+                        <img src="detail3.jpg" alt="Detailed white SUV exterior" />
+                        <img src="detail4.jpg" alt="Detailed rear cargo area" />
+                        <img src="detail5.jpg" alt="Clean passenger floor area" />
+                        <img src="detail6.jpg" alt="Detailed luxury interior trim" />
                     </div>
                 </div>
             </div>
@@ -1549,12 +1482,12 @@
                     <div class="team-role">Co-Founder & Lead Detailer</div>
                     <p>
                         Focused on precision, finish quality, and making vehicles look their absolute best.
-                        Isaac is especially passionate about correction work and protection services.
+                        Isaac is passionate about delivering clean, consistent results customers notice immediately.
                     </p>
                 </article>
 
                 <article class="team-card">
-                    <div class="team-avatar">C</div>
+                    <img src="charlie.jpg" alt="Charlie - Co-Founder of Signal Detailing" class="team-photo" />
                     <h3>Charlie</h3>
                     <div class="team-role">Co-Founder & Operations</div>
                     <p>
@@ -1741,8 +1674,6 @@
                                 <option value="Interior Detailing">Interior Detailing</option>
                                 <option value="Exterior Detailing">Exterior Detailing</option>
                                 <option value="Full Detail Package">Full Detail Package</option>
-                                <option value="Ceramic Coating">Ceramic Coating</option>
-                                <option value="Paint Correction">Paint Correction</option>
                                 <option value="Other / Not Sure">Other / Not Sure</option>
                             </select>
                         </div>
@@ -1773,7 +1704,7 @@
                 </a>
                 <p>
                     Premium mobile car detailing in Signal Mountain and Chattanooga, Tennessee.
-                    Interior details, exterior details, paint correction, ceramic coatings, and more.
+                    Interior details, exterior details, express washes, and full detail packages.
                 </p>
             </div>
 
@@ -1782,8 +1713,8 @@
                 <ul>
                     <li><a href="#services">Interior Detailing</a></li>
                     <li><a href="#services">Exterior Detailing</a></li>
-                    <li><a href="#services">Ceramic Coating</a></li>
-                    <li><a href="#services">Paint Correction</a></li>
+                    <li><a href="#services">Express Wash</a></li>
+                    <li><a href="#services">Full Detail Package</a></li>
                 </ul>
             </div>
 
@@ -1901,6 +1832,18 @@
                     x: -24,
                     duration: 0.7,
                     stagger: 0.12,
+                    ease: 'power2.out'
+                });
+
+                gsap.from('.gallery-grid img', {
+                    scrollTrigger: {
+                        trigger: '.gallery-grid',
+                        start: 'top 82%'
+                    },
+                    opacity: 0,
+                    y: 22,
+                    duration: 0.55,
+                    stagger: 0.08,
                     ease: 'power2.out'
                 });
 
